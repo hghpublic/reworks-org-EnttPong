@@ -16,6 +16,8 @@
 
 #include "../events/KeyDown.hpp"
 
+#include <cstdint>
+
 namespace ep
 {
 	///

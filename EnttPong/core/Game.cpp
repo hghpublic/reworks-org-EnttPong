@@ -8,6 +8,8 @@
 #include <SDL.h>
 
 #include "../components/All.hpp"
+#include "../events/KeyDown.hpp"
+#include "../events/KeyUp.hpp"
 
 #include "../Log.hpp"
 
@@ -116,11 +118,11 @@ namespace ep
 					break;
 
 				case SDL_KEYDOWN:
-					m_dispatcher.trigger<KeyDown>(m_window.m_event.key.keysym.sym);
+					m_dispatcher.trigger(KeyDown(m_window.m_event.key.keysym.sym));
 					break;
 
 				case SDL_KEYUP:
-					m_dispatcher.trigger<KeyUp>(m_window.m_event.key.keysym.sym);
+					m_dispatcher.trigger(KeyUp(m_window.m_event.key.keysym.sym));
 					break;
 			}
 		}
