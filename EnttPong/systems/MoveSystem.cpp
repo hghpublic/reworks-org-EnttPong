@@ -25,6 +25,8 @@
 			return -vel;
 			break;
 	}
+
+    return vel; // Should never reach this, but just in case.
 }
 
 namespace ep
